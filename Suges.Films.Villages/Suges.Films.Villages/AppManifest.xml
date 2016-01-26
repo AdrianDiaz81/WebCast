@@ -8,11 +8,11 @@
 >
   <Properties>
     <Title>Suges.Films.Villages</Title>
-    <StartPage>https://sugeswebcast.azurewebsites.com/?{StandardTokens}</StartPage>
+    <StartPage>https://sugeswebcast.azurewebsites.net/?{StandardTokens}</StartPage>
   </Properties>
 
   <AppPrincipal>
-    <RemoteWebApplication ClientId="f770c674-e3ad-4ea3-a729-f8f19f2c79e6" />
+    <RemoteWebApplication ClientId="d21379c7-ec20-48b9-8c5e-08779729b8ef" />
   </AppPrincipal>
   <AppPermissionRequests>
     <AppPermissionRequest Scope="http://sharepoint/content/sitecollection/web" Right="Read" />

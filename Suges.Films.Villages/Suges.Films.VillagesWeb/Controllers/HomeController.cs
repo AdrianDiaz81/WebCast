@@ -12,23 +12,23 @@ namespace Suges.Films.VillagesWeb.Controllers
         [SharePointContextFilter]
         public ActionResult Index()
         {
-            //User spUser = null;
+            User spUser = null;
 
-            //var spContext = SharePointContextProvider.Current.GetSharePointContext(HttpContext);
+            var spContext = SharePointContextProvider.Current.GetSharePointContext(HttpContext);
 
-            //using (var clientContext = spContext.CreateUserClientContextForSPHost())
-            //{
-            //    if (clientContext != null)
-            //    {
-            //        spUser = clientContext.Web.CurrentUser;
+            using (var clientContext = spContext.CreateUserClientContextForSPHost())
+            {
+                if (clientContext != null)
+                {
+                    spUser = clientContext.Web.CurrentUser;
 
-            //        clientContext.Load(spUser, user => user.Title);
+                    clientContext.Load(spUser, user => user.Title);
 
-            //        clientContext.ExecuteQuery();
+                    clientContext.ExecuteQuery();
 
-            //        ViewBag.UserName = spUser.Title;
-            //    }
-            //}
+                    ViewBag.UserName = spUser.Title;
+                }
+            }
 
             return View();
         }

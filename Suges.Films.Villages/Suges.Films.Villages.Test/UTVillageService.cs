@@ -44,7 +44,7 @@ namespace Suges.Films.Villages.Test
             Assert.IsTrue(service.Update(village,200));
         }
         [TestMethod]
-        public void Delte()
+        public void Delete()
         {
             
             Assert.IsTrue(service.Delete(1));
